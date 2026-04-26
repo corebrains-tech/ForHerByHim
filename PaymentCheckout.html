@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Checkout | For Her By Him</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,400;0,500;0,700;1,400&amp;family=Manrope:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-tertiary-fixed-variant": "#3c4a3f",
+                        "on-secondary": "#ffffff",
+                        "primary-fixed": "#fcdbde",
+                        "tertiary-fixed-dim": "#bbcbbc",
+                        "tertiary-container": "#d3e3d4",
+                        "tertiary-fixed": "#d7e7d8",
+                        "on-primary": "#ffffff",
+                        "on-surface": "#1e1b1b",
+                        "primary": "#71585b",
+                        "secondary-container": "#feb4d4",
+                        "inverse-surface": "#333030",
+                        "secondary": "#874c67",
+                        "on-tertiary-fixed": "#111e15",
+                        "primary-container": "#f8d7da",
+                        "on-secondary-container": "#7b425d",
+                        "on-primary-container": "#755c5f",
+                        "primary-fixed-dim": "#debfc2",
+                        "on-primary-fixed": "#281719",
+                        "on-secondary-fixed": "#370923",
+                        "on-tertiary-container": "#57665a",
+                        "inverse-on-surface": "#f6efef",
+                        "surface-container-highest": "#e8e1e0",
+                        "surface-variant": "#e8e1e0",
+                        "error-container": "#ffdad6",
+                        "surface-dim": "#dfd8d8",
+                        "on-primary-fixed-variant": "#584144",
+                        "surface-bright": "#fff8f7",
+                        "on-error": "#ffffff",
+                        "outline-variant": "#d2c3c4",
+                        "on-surface-variant": "#4f4445",
+                        "tertiary": "#536256",
+                        "surface-tint": "#71585b",
+                        "surface-container": "#f3ecec",
+                        "surface-container-low": "#f9f2f1",
+                        "on-tertiary": "#ffffff",
+                        "on-background": "#1e1b1b",
+                        "error": "#ba1a1a",
+                        "outline": "#817475",
+                        "surface-container-high": "#eee7e6",
+                        "on-error-container": "#93000a",
+                        "on-secondary-fixed-variant": "#6c354f",
+                        "inverse-primary": "#debfc2",
+                        "surface": "#fff8f7",
+                        "background": "#fff8f7",
+                        "secondary-fixed-dim": "#fbb1d1",
+                        "secondary-fixed": "#ffd8e6",
+                        "surface-container-lowest": "#ffffff"
+                    },
+                    "fontFamily": {
+                        "body-lg": ["Manrope"],
+                        "display-lg": ["Noto Serif"],
+                        "label-caps": ["Manrope"],
+                        "headline-md": ["Noto Serif"],
+                        "body-md": ["Manrope"],
+                        "headline-sm": ["Noto Serif"],
+                        "body-sm": ["Manrope"]
+                    },
+                    "fontSize": {
+                        "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                        "display-lg": ["48px", {"lineHeight": "1.2", "letterSpacing": "-0.02em", "fontWeight": "400"}],
+                        "label-caps": ["12px", {"lineHeight": "1.0", "letterSpacing": "0.1em", "fontWeight": "600"}],
+                        "headline-md": ["32px", {"lineHeight": "1.3", "fontWeight": "400"}],
+                        "body-md": ["16px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                        "headline-sm": ["24px", {"lineHeight": "1.4", "fontWeight": "500"}],
+                        "body-sm": ["14px", {"lineHeight": "1.5", "fontWeight": "400"}]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        .glass-panel {
+            background: rgba(255, 255, 255, 0.7);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(212, 175, 55, 0.2);
+        }
+        .minimal-input {
+            border: none;
+            border-bottom: 1px solid #f8d7da;
+            background: transparent;
+            border-radius: 0;
+            padding-left: 0;
+            transition: all 0.3s ease;
+        }
+        .minimal-input:focus {
+            outline: none;
+            box-shadow: none;
+            border-bottom: 1px solid #874c67;
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+        }
+    </style>
+</head>
+<body class="bg-background font-body-md text-on-background antialiased">
+<!-- Top Navigation Shell - Simplified for Checkout -->
+<header class="fixed top-0 w-full z-50 bg-white/80 backdrop-blur-xl border-b border-amber-100/40">
+<div class="flex justify-between items-center w-full px-10 py-5 max-w-screen-2xl mx-auto">
+<a href="HomePage.html" class="text-2xl font-serif italic text-rose-500 tracking-tighter no-underline">For Her By Him</a>
+<div class="flex items-center gap-6">
+<span class="material-symbols-outlined text-stone-500">lock</span>
+<span class="font-label-caps text-label-caps text-stone-500 uppercase">Secure Checkout</span>
+</div>
+</div>
+</header>
+<main class="pt-32 pb-24 px-10 max-w-screen-xl mx-auto">
+<!-- Progress Tracker -->
+<div class="flex justify-center mb-16">
+<div class="flex items-center gap-4">
+<div class="flex items-center gap-2">
+<span class="w-8 h-8 rounded-full bg-secondary text-white flex items-center justify-center font-label-caps text-[10px]">1</span>
+<span class="font-label-caps text-label-caps text-secondary">CART</span>
+</div>
+<div class="w-12 h-px bg-primary-container"></div>
+<div class="flex items-center gap-2">
+<span class="w-8 h-8 rounded-full bg-secondary text-white flex items-center justify-center font-label-caps text-[10px]">2</span>
+<span class="font-label-caps text-label-caps text-secondary">SHIPPING</span>
+</div>
+<div class="w-12 h-px bg-primary-container"></div>
+<div class="flex items-center gap-2">
+<span class="w-8 h-8 rounded-full bg-primary-container text-on-primary-container flex items-center justify-center font-label-caps text-[10px]">3</span>
+<span class="font-label-caps text-label-caps text-on-surface-variant">PAYMENT</span>
+</div>
+</div>
+</div>
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-16">
+<!-- Left Side: Shipping & Billing Forms -->
+<div class="lg:col-span-7">
+<section class="mb-12">
+<h2 class="font-headline-sm text-headline-sm text-on-surface mb-8">Shipping Information</h2>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-10">
+<div class="flex flex-col gap-2">
+<label class="font-label-caps text-label-caps text-stone-500 uppercase">First Name</label>
+<input class="minimal-input py-2 text-on-surface" placeholder="Evelyn" type="text"/>
+</div>
+<div class="flex flex-col gap-2">
+<label class="font-label-caps text-label-caps text-stone-500 uppercase">Last Name</label>
+<input class="minimal-input py-2 text-on-surface" placeholder="Sinclair" type="text"/>
+</div>
+<div class="md:col-span-2 flex flex-col gap-2">
+<label class="font-label-caps text-label-caps text-stone-500 uppercase">Email Address</label>
+<input class="minimal-input py-2 text-on-surface" placeholder="e.sinclair@luxury.com" type="email"/>
+</div>
+<div class="md:col-span-2 flex flex-col gap-2">
+<label class="font-label-caps text-label-caps text-stone-500 uppercase">Shipping Address</label>
+<input class="minimal-input py-2 text-on-surface" placeholder="72nd Fifth Avenue, Suite 400" type="text"/>
+</div>
+<div class="flex flex-col gap-2">
+<label class="font-label-caps text-label-caps text-stone-500 uppercase">City</label>
+<input class="minimal-input py-2 text-on-surface" placeholder="New York" type="text"/>
+</div>
+<div class="flex flex-col gap-2">
+<label class="font-label-caps text-label-caps text-stone-500 uppercase">Postal Code</label>
+<input class="minimal-input py-2 text-on-surface" placeholder="10011" type="text"/>
+</div>
+</div>
+</section>
+<section class="mb-12">
+<h2 class="font-headline-sm text-headline-sm text-on-surface mb-8">Payment Method</h2>
+<div class="space-y-4">
+<!-- Credit Card Option -->
+<div class="p-6 rounded-xl border border-secondary bg-white shadow-sm flex flex-col gap-6">
+<div class="flex justify-between items-center">
+<div class="flex items-center gap-3">
+<div class="w-5 h-5 rounded-full border-4 border-secondary"></div>
+<span class="font-body-md text-on-surface font-medium">Credit or Debit Card</span>
+</div>
+<div class="flex gap-2">
+<span class="material-symbols-outlined text-on-surface-variant">credit_card</span>
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-10">
+<div class="md:col-span-2 flex flex-col gap-2">
+<label class="font-label-caps text-label-caps text-stone-500 uppercase">Card Number</label>
+<input class="minimal-input py-2 text-on-surface" placeholder="0000 0000 0000 0000" type="text"/>
+</div>
+<div class="flex flex-col gap-2">
+<label class="font-label-caps text-label-caps text-stone-500 uppercase">Expiry Date</label>
+<input class="minimal-input py-2 text-on-surface" placeholder="MM/YY" type="text"/>
+</div>
+<div class="flex flex-col gap-2">
+<label class="font-label-caps text-label-caps text-stone-500 uppercase">CVV</label>
+<input class="minimal-input py-2 text-on-surface" placeholder="***" type="password"/>
+</div>
+</div>
+</div>
+<!-- Wallet Options -->
+<div class="p-6 rounded-xl border border-primary-container bg-surface-container-lowest hover:border-secondary transition-colors cursor-pointer flex items-center justify-between">
+<div class="flex items-center gap-3">
+<div class="w-5 h-5 rounded-full border border-outline"></div>
+<span class="font-body-md text-on-surface-variant">PayPal</span>
+</div>
+<span class="material-symbols-outlined text-on-surface-variant">account_balance_wallet</span>
+</div>
+<div class="p-6 rounded-xl border border-primary-container bg-surface-container-lowest hover:border-secondary transition-colors cursor-pointer flex items-center justify-between">
+<div class="flex items-center gap-3">
+<div class="w-5 h-5 rounded-full border border-outline"></div>
+<span class="font-body-md text-on-surface-variant">Apple Pay</span>
+</div>
+<span class="material-symbols-outlined text-on-surface-variant">contactless</span>
+</div>
+</div>
+</section>
+<div class="pt-6 border-t border-primary-container/30">
+<button class="w-full py-5 bg-secondary text-white rounded-xl font-label-caps tracking-widest uppercase hover:bg-on-secondary-container transition-all shadow-lg hover:shadow-secondary/20">
+                        Complete Purchase — $2,845.00
+                    </button>
+<a href="ProductListing.html" class="w-full py-3 border border-secondary text-secondary rounded-xl font-label-caps tracking-widest uppercase text-center hover:bg-secondary hover:text-white transition-all mt-4 block no-underline">
+                        Continue Shopping
+                    </a>
+<p class="text-center text-body-sm text-on-surface-variant mt-4 font-body-sm">
+                        By completing your purchase, you agree to our Terms of Service.
+                    </p>
+</div>
+</div>
+<!-- Right Side: Order Summary -->
+<div class="lg:col-span-5">
+<div class="sticky top-32 glass-panel p-8 rounded-2xl shadow-[0_8px_30px_rgba(248,215,218,0.2)]">
+<h3 class="font-headline-sm text-headline-sm text-on-surface mb-8">Order Summary</h3>
+<div class="space-y-6 mb-8">
+<!-- Item 1 -->
+<div class="flex gap-4">
+<div class="w-24 h-24 bg-surface-container-high rounded-lg overflow-hidden flex-shrink-0">
+<img alt="Diamond Necklace" class="w-full h-full object-cover" data-alt="Close up of a delicate handcrafted 18k gold diamond necklace on a soft blush velvet background with gentle light" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCReifVa6dTh3MImAeQrq9vIcPFAYrK8RMAPlQyYB_Ja55umiSktvqmKtrs3lJq0NjHVZrsW8dUViKFIdEOqiK3lQpwqu6M7LzOTnFStA1n8HkyI0IleawBuBhfWMGU6sgYkbkl9_Nt5--29mY3Ny1fGSGcEM20dgGs0baJU9CiJiQz3lp07o-fVerlQrtih_JhZmHBjLNj1TWwLr2QejqRQDMg1p8W2wxpoFi_uOk-ykQDIXG4IYwgYk1HJF7C5b3pEE-bCkE9l-M"/>
+</div>
+<div class="flex flex-col justify-center">
+<span class="font-body-md font-medium text-on-surface">Ethereal Bloom Necklace</span>
+<span class="text-body-sm text-on-surface-variant">18K Rose Gold / 0.5ct Diamond</span>
+<span class="font-body-md text-secondary mt-1">$1,250.00</span>
+</div>
+</div>
+<!-- Item 2 -->
+<div class="flex gap-4">
+<div class="w-24 h-24 bg-surface-container-high rounded-lg overflow-hidden flex-shrink-0">
+<img alt="Diamond Ring" class="w-full h-full object-cover" data-alt="Elegant diamond engagement ring in platinum setting resting on a white silk fabric with soft ethereal shadows" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC_3rCae7E4FM6zA1s3SHFBcLQTE-CX8HYznhsClSk7BL3AF7zZD8bIHFL2lE3PFLKnfg4KLPkqdVwrcddIDmpXOj4xyhXldZd3-8gl_es3kvMPaapTcqnhIbfIvvnZh5I185XpdqoimVMKG_bul1Q24pmo_x4YpYwfWMp-Prals1qnat6j99JeqDHfJvoTayX-yozWiHO8aRYfHTtQdKlH5gLMYJp2ZKuZIho7HoGuFPCzsogHICOKIyx5RYBJHY8AO0HaxgZDHvE"/>
+</div>
+<div class="flex flex-col justify-center">
+<span class="font-body-md font-medium text-on-surface">Eternal Grace Band</span>
+<span class="text-body-sm text-on-surface-variant">Platinum / Baguette Cut</span>
+<span class="font-body-md text-secondary mt-1">$1,595.00</span>
+</div>
+</div>
+</div>
+<div class="space-y-4 border-t border-amber-100/40 pt-6">
+<div class="flex justify-between text-body-md">
+<span class="text-on-surface-variant">Subtotal</span>
+<span class="text-on-surface">$2,845.00</span>
+</div>
+<div class="flex justify-between text-body-md">
+<span class="text-on-surface-variant">Shipping</span>
+<span class="text-on-tertiary-fixed-variant">Complimentary</span>
+</div>
+<div class="flex justify-between text-body-md">
+<span class="text-on-surface-variant">Tax</span>
+<span class="text-on-surface">$0.00</span>
+</div>
+<div class="flex justify-between pt-4 border-t border-amber-100/40">
+<span class="font-headline-sm text-headline-sm text-on-surface">Total</span>
+<span class="font-headline-sm text-headline-sm text-secondary">$2,845.00</span>
+</div>
+</div>
+<!-- Gift Note -->
+<div class="mt-8 p-4 bg-primary-container/30 rounded-xl border border-primary-container/50">
+<div class="flex items-start gap-3">
+<span class="material-symbols-outlined text-secondary" style="font-variation-settings: 'FILL' 1;">card_giftcard</span>
+<div>
+<p class="font-body-sm font-medium text-on-secondary-container">Add a complimentary gift note?</p>
+<button class="text-body-sm text-secondary underline mt-1">Write your message</button>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</main>
+<footer class="bg-stone-50 py-16 px-10 border-t border-amber-100/30">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-12 max-w-screen-xl mx-auto">
+<div class="md:col-span-1">
+<div class="font-serif text-xl text-stone-800 mb-4">For Her By Him</div>
+<p class="font-serif text-sm tracking-normal text-stone-600">© 2024 For Her By Him. All pieces are handcrafted with love.</p>
+</div>
+<div class="flex flex-col gap-3">
+<h4 class="font-label-caps text-label-caps text-stone-800 mb-2">SHOP</h4>
+<a class="font-serif text-sm text-stone-500 hover:text-rose-400 transition-colors" href="#">Necklaces</a>
+<a class="font-serif text-sm text-stone-500 hover:text-rose-400 transition-colors" href="#">Earrings</a>
+<a class="font-serif text-sm text-stone-500 hover:text-rose-400 transition-colors" href="#">Bespoke Services</a>
+</div>
+<div class="flex flex-col gap-3">
+<h4 class="font-label-caps text-label-caps text-stone-800 mb-2">SERVICES</h4>
+<a class="font-serif text-sm text-stone-500 hover:text-rose-400 transition-colors" href="#">Shipping &amp; Returns</a>
+<a class="font-serif text-sm text-stone-500 hover:text-rose-400 transition-colors" href="#">Jewelry Care</a>
+<a class="font-serif text-sm text-stone-500 hover:text-rose-400 transition-colors" href="#">Sustainability</a>
+</div>
+<div class="flex flex-col gap-3">
+<h4 class="font-label-caps text-label-caps text-stone-800 mb-2">STAY CONNECTED</h4>
+<p class="font-serif text-sm text-stone-500">Join our newsletter for exclusive previews.</p>
+<div class="flex items-center gap-2 mt-2">
+<input class="minimal-input py-1 text-sm flex-grow" placeholder="Your Email" type="text"/>
+<button class="material-symbols-outlined text-rose-400">arrow_forward</button>
+</div>
+</div>
+</div>
+</footer>
+</body></html>
